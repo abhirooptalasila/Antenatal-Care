@@ -311,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixt-fH-f70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629.60000000000002" y="-120.44334975369459"/>
+            <point key="canvasLocation" x="1022" y="-163"/>
         </scene>
         <!--Tests-->
         <scene sceneID="Jj6-Hn-Xw3">
@@ -365,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUL-Zp-iBu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2054" y="-1245"/>
+            <point key="canvasLocation" x="2583" y="-1167"/>
         </scene>
         <!--Vaccination-->
         <scene sceneID="CLD-n7-Oh4">
@@ -564,6 +564,6 @@
         <image name="v2" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6NZ-dB-7id"/>
+        <segue reference="90j-Jf-xT5"/>
     </inferredMetricsTieBreakers>
 </document>
