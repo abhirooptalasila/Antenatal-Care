@@ -410,10 +410,10 @@
             </objects>
             <point key="canvasLocation" x="630" y="749"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Os0-OV-9xx">
             <objects>
-                <viewController id="uot-I0-Y1D" sceneMemberID="viewController">
+                <viewController id="uot-I0-Y1D" customClass="LoginViewController" customModule="Antenatal_Care" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGz-fV-mp6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -564,7 +564,6 @@
         <image name="v2" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ILB-3N-3N1"/>
-        <segue reference="6Uo-eo-m71"/>
+        <segue reference="6NZ-dB-7id"/>
     </inferredMetricsTieBreakers>
 </document>
