@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		3F4044C3234363F300A8D7E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044C2234363F300A8D7E3 /* AppDelegate.swift */; };
 		3F4044C5234363F300A8D7E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044C4234363F300A8D7E3 /* SceneDelegate.swift */; };
-		3F4044C7234363F300A8D7E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044C6234363F300A8D7E3 /* ViewController.swift */; };
+		3F4044C7234363F300A8D7E3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044C6234363F300A8D7E3 /* LoginViewController.swift */; };
 		3F4044CA234363F300A8D7E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4044C8234363F300A8D7E3 /* Main.storyboard */; };
 		3F4044CD234363F300A8D7E3 /* Antenatal_Care.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044CB234363F300A8D7E3 /* Antenatal_Care.xcdatamodeld */; };
 		3F4044CF234363F500A8D7E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4044CE234363F500A8D7E3 /* Assets.xcassets */; };
 		3F4044D2234363F500A8D7E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4044D0234363F500A8D7E3 /* LaunchScreen.storyboard */; };
+		3FF98B34234624B7005D8741 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98B33234624B7005D8741 /* Patient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F4044BF234363F300A8D7E3 /* Antenatal Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Antenatal Care.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4044C2234363F300A8D7E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F4044C4234363F300A8D7E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F4044C6234363F300A8D7E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F4044C6234363F300A8D7E3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F4044C9234363F300A8D7E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F4044CC234363F300A8D7E3 /* Antenatal_Care.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Antenatal_Care.xcdatamodel; sourceTree = "<group>"; };
 		3F4044CE234363F500A8D7E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4044D1234363F500A8D7E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4044D3234363F500A8D7E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FF98B33234624B7005D8741 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			children = (
 				3F4044C2234363F300A8D7E3 /* AppDelegate.swift */,
 				3F4044C4234363F300A8D7E3 /* SceneDelegate.swift */,
-				3F4044C6234363F300A8D7E3 /* ViewController.swift */,
+				3F4044C6234363F300A8D7E3 /* LoginViewController.swift */,
 				3F4044C8234363F300A8D7E3 /* Main.storyboard */,
+				3FF98B33234624B7005D8741 /* Patient.swift */,
 				3F4044CE234363F500A8D7E3 /* Assets.xcassets */,
 				3F4044D0234363F500A8D7E3 /* LaunchScreen.storyboard */,
 				3F4044D3234363F500A8D7E3 /* Info.plist */,
@@ -141,10 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F4044C7234363F300A8D7E3 /* ViewController.swift in Sources */,
+				3F4044C7234363F300A8D7E3 /* LoginViewController.swift in Sources */,
 				3F4044CD234363F300A8D7E3 /* Antenatal_Care.xcdatamodeld in Sources */,
 				3F4044C3234363F300A8D7E3 /* AppDelegate.swift in Sources */,
 				3F4044C5234363F300A8D7E3 /* SceneDelegate.swift in Sources */,
+				3FF98B34234624B7005D8741 /* Patient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
