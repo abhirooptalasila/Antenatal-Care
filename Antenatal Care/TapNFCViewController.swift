@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreNFC
 
-class TapNFCViewController: UIViewController {
-
+class TapNFCViewController: UIViewController, NFCNDEFReaderSessionDelegate {
+    
+    @IBOutlet weak var messageLabel: UIButton!
+    var nfcsession:NFCNDEFReaderSession?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,5 +30,30 @@ class TapNFCViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        //dispose of any resources that can be disposed
+    }
+    
+    @IBAction func scanPressed(_ sender: Any) {
+        nfcsession = NFCNDEFReaderSession.init(delegate: self, queue: nil, invalidateAfterFirstRead: ((nfcsession?.begin()) != nil))
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        print("The session was invalidated: \(error.localizedDescription)")
+    }
+    
+    //when this is called you'll get an array of detected messages
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        for message in messages {
+            for record in message.records {
+                if let string = String(data: record.payload, encoding: .ascii) {
+                    print(string)
+                }
+            }
+        }
+    }
+    
 
 }

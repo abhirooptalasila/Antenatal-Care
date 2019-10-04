@@ -300,28 +300,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kye-9d-NR5">
-                                <rect key="frame" x="71" y="380" width="233" height="52"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
-                                <state key="normal" title="TAP NFC CARD">
+                                <rect key="frame" x="30" y="100" width="315" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="0Bw-QY-upN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Press Scan to get started">
                                     <color key="titleColor" red="0.14810049533843994" green="0.043042309582233429" blue="0.1486397385597229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="l6G-SD-Ef5" kind="presentation" modalPresentationStyle="fullScreen" id="gEz-16-eoq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dd-re-ou1">
+                                <rect key="frame" x="38" y="609" width="299" height="49"/>
+                                <color key="backgroundColor" red="0.76154834032058716" green="0.71647387742996216" blue="0.81178140640258789" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="7MM-kU-1GA"/>
+                                </constraints>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanPressed:" destination="AHb-NB-tpd" eventType="touchUpInside" id="ZpG-8G-Zjk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerX" secondItem="tGf-WO-6bC" secondAttribute="centerX" id="I8N-4Q-esx"/>
-                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerY" secondItem="tGf-WO-6bC" secondAttribute="centerY" id="oqH-aM-EAJ"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="leading" secondItem="qTd-wX-WA6" secondAttribute="leading" constant="30" id="3Lt-t8-ch7"/>
+                            <constraint firstItem="qTd-wX-WA6" firstAttribute="trailing" secondItem="kye-9d-NR5" secondAttribute="trailing" constant="30" id="5cu-Xa-dpo"/>
+                            <constraint firstItem="4Dd-re-ou1" firstAttribute="leading" secondItem="qTd-wX-WA6" secondAttribute="leading" constant="38" id="JaZ-4B-UIh"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="top" secondItem="qTd-wX-WA6" secondAttribute="top" constant="56" id="LlH-Kx-Inw"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerX" secondItem="tGf-WO-6bC" secondAttribute="centerX" id="gMD-VF-EeO"/>
+                            <constraint firstItem="qTd-wX-WA6" firstAttribute="bottom" secondItem="4Dd-re-ou1" secondAttribute="bottom" constant="71" id="lxz-kQ-FTx"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerX" secondItem="4Dd-re-ou1" secondAttribute="centerX" id="tvo-Wv-Lbo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qTd-wX-WA6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Update" image="square.and.arrow.down.fill" catalog="system" id="ykp-QJ-1H5"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="kye-9d-NR5" id="Sne-RE-tTb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixt-fH-f70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="-163"/>
+            <point key="canvasLocation" x="1021.6" y="-163.30049261083744"/>
         </scene>
         <!--Vaccination-->
         <scene sceneID="zSZ-8L-Uzt">
@@ -374,7 +398,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="gOF-eQ-whb">
-                                <rect key="frame" x="0.0" y="105" width="375" height="142.00000000000011"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141.99999999999989" id="f6W-uc-fSv"/>
                                 </constraints>
