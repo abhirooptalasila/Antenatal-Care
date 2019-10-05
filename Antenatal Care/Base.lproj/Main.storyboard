@@ -278,16 +278,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tests" id="9YI-OH-2MF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="3Me-Ii-VyZ"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="UzI-Pw-Uul">
-                            <connections>
-                                <segue destination="6RO-nv-yvC" kind="presentation" modalPresentationStyle="fullScreen" id="ekH-bY-Ldi"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="xUq-E7-Ism">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pic-bj-jtp">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Back"/>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4746" y="986"/>
+            <point key="canvasLocation" x="4676" y="547"/>
         </scene>
         <!--Update-->
         <scene sceneID="vIa-lb-xSl">
@@ -298,33 +300,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kye-9d-NR5">
-                                <rect key="frame" x="71" y="380" width="233" height="52"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
-                                <state key="normal" title="TAP NFC CARD">
+                                <rect key="frame" x="30" y="100" width="315" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="0Bw-QY-upN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Press Scan to get started">
                                     <color key="titleColor" red="0.14810049533843994" green="0.043042309582233429" blue="0.1486397385597229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="l6G-SD-Ef5" kind="presentation" modalPresentationStyle="fullScreen" id="gEz-16-eoq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dd-re-ou1">
+                                <rect key="frame" x="38" y="609" width="299" height="49"/>
+                                <color key="backgroundColor" red="0.76154834032058716" green="0.71647387742996216" blue="0.81178140640258789" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="7MM-kU-1GA"/>
+                                </constraints>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanPressed:" destination="AHb-NB-tpd" eventType="touchUpInside" id="ZpG-8G-Zjk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerX" secondItem="tGf-WO-6bC" secondAttribute="centerX" id="I8N-4Q-esx"/>
-                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerY" secondItem="tGf-WO-6bC" secondAttribute="centerY" id="oqH-aM-EAJ"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="leading" secondItem="qTd-wX-WA6" secondAttribute="leading" constant="30" id="3Lt-t8-ch7"/>
+                            <constraint firstItem="qTd-wX-WA6" firstAttribute="trailing" secondItem="kye-9d-NR5" secondAttribute="trailing" constant="30" id="5cu-Xa-dpo"/>
+                            <constraint firstItem="4Dd-re-ou1" firstAttribute="leading" secondItem="qTd-wX-WA6" secondAttribute="leading" constant="38" id="JaZ-4B-UIh"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="top" secondItem="qTd-wX-WA6" secondAttribute="top" constant="56" id="LlH-Kx-Inw"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerX" secondItem="tGf-WO-6bC" secondAttribute="centerX" id="gMD-VF-EeO"/>
+                            <constraint firstItem="qTd-wX-WA6" firstAttribute="bottom" secondItem="4Dd-re-ou1" secondAttribute="bottom" constant="71" id="lxz-kQ-FTx"/>
+                            <constraint firstItem="kye-9d-NR5" firstAttribute="centerX" secondItem="4Dd-re-ou1" secondAttribute="centerX" id="tvo-Wv-Lbo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qTd-wX-WA6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Update" image="square.and.arrow.down.fill" catalog="system" id="ykp-QJ-1H5"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="kye-9d-NR5" id="Sne-RE-tTb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixt-fH-f70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="-777"/>
+            <point key="canvasLocation" x="1021.6" y="-163.30049261083744"/>
         </scene>
         <!--Vaccination-->
         <scene sceneID="zSZ-8L-Uzt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PZC-UK-HjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="nby-9q-Fat" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Vaccination" image="v2" id="fPH-Kw-dOA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YIJ-42-NEa">
@@ -335,8 +360,9 @@
                         <segue destination="DWx-4d-HkV" kind="relationship" relationship="rootViewController" id="axd-UQ-8Rq"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZC-UK-HjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3337" y="-1171"/>
+            <point key="canvasLocation" x="2414" y="-1108"/>
         </scene>
         <!--Past Records-->
         <scene sceneID="syO-P5-G8c">
@@ -352,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrr-fi-gHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="916"/>
+            <point key="canvasLocation" x="630" y="749"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Os0-OV-9xx">
@@ -501,7 +527,6 @@
         <!--Tests-->
         <scene sceneID="NAK-Qd-oSF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JMR-Iy-Y7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="V1n-G3-xBT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tests" image="t1" id="Ymt-Hn-LCA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0A9-Dq-Q2f">
@@ -512,13 +537,13 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NBz-WL-LRB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMR-Iy-Y7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="373"/>
+            <point key="canvasLocation" x="2650" y="816"/>
         </scene>
         <!--Basic Data-->
         <scene sceneID="9x8-fZ-WWw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="82P-xu-bP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="BCy-Z4-wRj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Basic Data" image="doc.fill" catalog="system" id="6WD-68-7Gz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eSS-na-w6N">
@@ -529,8 +554,9 @@
                         <segue destination="EJ8-L9-Exc" kind="relationship" relationship="rootViewController" id="RHr-uh-mrL"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82P-xu-bP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3729" y="-353"/>
+            <point key="canvasLocation" x="3622" y="-317"/>
         </scene>
         <!--Basic Data-->
         <scene sceneID="XGb-DN-QW8">
@@ -803,16 +829,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Basic Data" id="ORM-UY-nQm">
                         <barButtonItem key="backBarButtonItem" title="Back" id="h27-3N-iRQ"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="4JN-xa-yzQ">
-                            <connections>
-                                <segue destination="6RO-nv-yvC" kind="presentation" modalPresentationStyle="fullScreen" id="uge-UW-fkf"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="mvy-2V-PIC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PN5-ch-0P1">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Back"/>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmY-t1-azf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4910" y="179"/>
+            <point key="canvasLocation" x="4794" y="-318"/>
         </scene>
         <!--Vaccinations-->
         <scene sceneID="XOc-Uk-T5f">
@@ -1084,10 +1112,13 @@
                         <viewLayoutGuide key="safeArea" id="pNI-UA-vzG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Vaccinations" id="sUI-o7-CBB">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="w6U-51-bPZ">
-                            <connections>
-                                <segue destination="6RO-nv-yvC" kind="presentation" modalPresentationStyle="fullScreen" id="yVx-E9-Lyn"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" image="house" catalog="system" style="plain" id="VJs-c7-4qJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7QH-dM-JAo">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Back"/>
+                            </button>
+                            <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -1100,11 +1131,9 @@
         <image name="Group" width="421" height="392"/>
         <image name="doc.fill" catalog="system" width="56" height="64"/>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="58" height="64"/>
         <image name="t1" width="20" height="20"/>
         <image name="v2" width="29" height="29"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yVx-E9-Lyn"/>
-    </inferredMetricsTieBreakers>
 </document>
