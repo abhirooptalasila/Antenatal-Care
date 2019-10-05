@@ -278,12 +278,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tests" id="9YI-OH-2MF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="3Me-Ii-VyZ"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="xUq-E7-Ism">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pic-bj-jtp">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;Back"/>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="4qC-eF-kkA">
+                            <connections>
+                                <segue destination="AHb-NB-tpd" kind="presentation" modalPresentationStyle="fullScreen" id="wER-EX-JWP"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -313,7 +311,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dd-re-ou1">
-                                <rect key="frame" x="38" y="609" width="299" height="49"/>
+                                <rect key="frame" x="38" y="658" width="299" height="49"/>
                                 <color key="backgroundColor" red="0.76154834032058716" green="0.71647387742996216" blue="0.81178140640258789" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="7MM-kU-1GA"/>
@@ -829,12 +827,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Basic Data" id="ORM-UY-nQm">
                         <barButtonItem key="backBarButtonItem" title="Back" id="h27-3N-iRQ"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="mvy-2V-PIC">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PN5-ch-0P1">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;Back"/>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Cqu-X6-uaJ">
+                            <connections>
+                                <segue destination="AHb-NB-tpd" kind="presentation" modalPresentationStyle="fullScreen" id="7eu-g5-ZCk"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -1112,13 +1108,10 @@
                         <viewLayoutGuide key="safeArea" id="pNI-UA-vzG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Vaccinations" id="sUI-o7-CBB">
-                        <barButtonItem key="leftBarButtonItem" image="house" catalog="system" style="plain" id="VJs-c7-4qJ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7QH-dM-JAo">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;Back"/>
-                            </button>
-                            <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="npy-BZ-r11">
+                            <connections>
+                                <segue destination="AHb-NB-tpd" kind="presentation" modalPresentationStyle="fullScreen" id="VCh-PD-arv"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -1131,9 +1124,11 @@
         <image name="Group" width="421" height="392"/>
         <image name="doc.fill" catalog="system" width="56" height="64"/>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
-        <image name="house" catalog="system" width="64" height="54"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="58" height="64"/>
         <image name="t1" width="20" height="20"/>
         <image name="v2" width="29" height="29"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7eu-g5-ZCk"/>
+    </inferredMetricsTieBreakers>
 </document>
