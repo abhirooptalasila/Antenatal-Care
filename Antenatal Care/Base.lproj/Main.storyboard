@@ -383,7 +383,7 @@
         <!--Login View Controller-->
         <scene sceneID="Os0-OV-9xx">
             <objects>
-                <viewController id="uot-I0-Y1D" customClass="LoginViewController" customModule="Antenatal_Care" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialViewController" id="uot-I0-Y1D" customClass="LoginViewController" customModule="Antenatal_Care" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGz-fV-mp6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,11 +394,11 @@
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="6RO-nv-yvC" kind="presentation" modalPresentationStyle="fullScreen" id="6NZ-dB-7id"/>
+                                    <action selector="loginPressed:" destination="uot-I0-Y1D" eventType="touchUpInside" id="Rbv-bp-NFF"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="gOF-eQ-whb">
-                                <rect key="frame" x="0.0" y="105" width="375" height="142"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="142.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141.99999999999989" id="f6W-uc-fSv"/>
                                 </constraints>
@@ -428,12 +428,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8o-fS-QVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1348" y="137"/>
+            <point key="canvasLocation" x="-2500" y="137"/>
+        </scene>
+        <!--Unverified View Controller-->
+        <scene sceneID="tIR-b8-8Iv">
+            <objects>
+                <viewController storyboardIdentifier="unverifiedViewController" id="OQ9-t3-Tci" customClass="unverifiedViewController" customModule="Antenatal_Care" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j9l-xV-STH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait for verifictaion." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihR-sC-G8R">
+                                <rect key="frame" x="85" y="395.66666666666669" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-mU-qfs">
+                                <rect key="frame" x="141" y="496" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back to Login"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="OQ9-t3-Tci" eventType="touchUpInside" id="jp9-ir-wEv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ihR-sC-G8R" firstAttribute="centerY" secondItem="j9l-xV-STH" secondAttribute="centerY" id="FZa-2W-3ba"/>
+                            <constraint firstItem="ihR-sC-G8R" firstAttribute="centerX" secondItem="j9l-xV-STH" secondAttribute="centerX" id="JPg-Zx-lvn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LuE-us-gVw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gyo-jl-jn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1684" y="675"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0KG-JQ-che">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6RO-nv-yvC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="scanTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="6RO-nv-yvC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2gH-Jw-upp"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jDg-Je-4gw">
