@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>439567195874-g8vvsbo4msdstq6b1jm6af7cc61nbahc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.439567195874-g8vvsbo4msdstq6b1jm6af7cc61nbahc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCUfR8O89qaRfRu1EDhG6j3kDrXzB3k3Lk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>439567195874</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.Antenatal-Care</string>
+	<key>PROJECT_ID</key>
+	<string>antenatal-care-bb20b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>antenatal-care-bb20b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:439567195874:ios:36de8f2f44cc7369a908bb</string>
+	<key>DATABASE_URL</key>
+	<string>https://antenatal-care-bb20b.firebaseio.com</string>
+</dict>
+</plist>

@@ -20,6 +20,7 @@
 		3FAC68B92347825A0002E33A /* VaccinationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */; };
 		3FAC68BB234782660002E33A /* TestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68BA234782660002E33A /* TestsViewController.swift */; };
 		3FAC68BD234782750002E33A /* BasicDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68BC234782750002E33A /* BasicDataViewController.swift */; };
+		3FCEADD6234C9B3700C1177F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCEADD5234C9B3700C1177F /* GoogleService-Info.plist */; };
 		3FF98B34234624B7005D8741 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98B33234624B7005D8741 /* Patient.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationsViewController.swift; sourceTree = "<group>"; };
 		3FAC68BA234782660002E33A /* TestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsViewController.swift; sourceTree = "<group>"; };
 		3FAC68BC234782750002E33A /* BasicDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataViewController.swift; sourceTree = "<group>"; };
+		3FCEADD5234C9B3700C1177F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FF98B33234624B7005D8741 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		49A5A7116789A9E8909A6579 /* Pods-Antenatal Care.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antenatal Care.release.xcconfig"; path = "Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care.release.xcconfig"; sourceTree = "<group>"; };
 		A6A4685A4F72A32153783AB8 /* Pods-Antenatal Care.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antenatal Care.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				3FF98B33234624B7005D8741 /* Patient.swift */,
 				3F4044CE234363F500A8D7E3 /* Assets.xcassets */,
 				3F4044D0234363F500A8D7E3 /* LaunchScreen.storyboard */,
+				3FCEADD5234C9B3700C1177F /* GoogleService-Info.plist */,
 				3F4044D3234363F500A8D7E3 /* Info.plist */,
 				3F4044CB234363F300A8D7E3 /* Antenatal_Care.xcdatamodeld */,
 			);
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4044D2234363F500A8D7E3 /* LaunchScreen.storyboard in Resources */,
+				3FCEADD6234C9B3700C1177F /* GoogleService-Info.plist in Resources */,
 				3F4044CF234363F500A8D7E3 /* Assets.xcassets in Resources */,
 				3F4044CA234363F300A8D7E3 /* Main.storyboard in Resources */,
 			);
