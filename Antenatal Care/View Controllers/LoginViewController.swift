@@ -13,6 +13,7 @@ import Firebase
 class LoginViewController: UIViewController
 {
 
+    @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,6 +34,7 @@ class LoginViewController: UIViewController
         let authVC=authUI!.authViewController()
         authVC.modalPresentationStyle = .fullScreen
         present(authVC, animated: true, completion: nil)
+        
     }
 }
 extension LoginViewController: FUIAuthDelegate
@@ -44,7 +46,7 @@ extension LoginViewController: FUIAuthDelegate
     }
     guard let uid=authDataResult?.user.uid else{return}
     let db=Firestore.firestore()
-    db.collection("Verified users").whereField("uid", isEqualTo: uid)
+    db.collection("verified_users").whereField("uid", isEqualTo: uid)
         .getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -54,10 +56,9 @@ extension LoginViewController: FUIAuthDelegate
                 guard let querySnapshot = querySnapshot else {return}
                 if querySnapshot.count > 0
                 {
+                    self.loginButton.isEnabled=false
                     Constants.id.docid=querySnapshot.documents[0].documentID
-                    let verifiedVC=self.storyboard?.instantiateViewController(identifier: Constants.verifiedStoryboard.verifiedViewControllers) as? TapNFCViewController
-                    self.view.window?.rootViewController=verifiedVC
-                    self.view.window?.makeKeyAndVisible()
+                    self.performSegue(withIdentifier: "successfulLogin", sender: self)
                 }
                 else
                 {
