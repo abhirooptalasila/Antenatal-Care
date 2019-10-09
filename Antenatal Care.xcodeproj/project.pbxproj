@@ -20,6 +20,9 @@
 		3FAC68B92347825A0002E33A /* VaccinationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */; };
 		3FAC68BB234782660002E33A /* TestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68BA234782660002E33A /* TestsViewController.swift */; };
 		3FAC68BD234782750002E33A /* BasicDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68BC234782750002E33A /* BasicDataViewController.swift */; };
+		3FE655E7234DD3A0004A0997 /* vaccineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE655E6234DD3A0004A0997 /* vaccineTableViewController.swift */; };
+		3FE655E9234DD3B2004A0997 /* basicDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE655E8234DD3B2004A0997 /* basicDataTableViewController.swift */; };
+		3FE655EB234DD3BE004A0997 /* testsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE655EA234DD3BE004A0997 /* testsTableViewController.swift */; };
 		3FF98B34234624B7005D8741 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98B33234624B7005D8741 /* Patient.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,9 @@
 		3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationsViewController.swift; sourceTree = "<group>"; };
 		3FAC68BA234782660002E33A /* TestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsViewController.swift; sourceTree = "<group>"; };
 		3FAC68BC234782750002E33A /* BasicDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataViewController.swift; sourceTree = "<group>"; };
+		3FE655E6234DD3A0004A0997 /* vaccineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vaccineTableViewController.swift; sourceTree = "<group>"; };
+		3FE655E8234DD3B2004A0997 /* basicDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicDataTableViewController.swift; sourceTree = "<group>"; };
+		3FE655EA234DD3BE004A0997 /* testsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsTableViewController.swift; sourceTree = "<group>"; };
 		3FF98B33234624B7005D8741 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		49A5A7116789A9E8909A6579 /* Pods-Antenatal Care.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antenatal Care.release.xcconfig"; path = "Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care.release.xcconfig"; sourceTree = "<group>"; };
 		A6A4685A4F72A32153783AB8 /* Pods-Antenatal Care.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antenatal Care.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 				3F4044C4234363F300A8D7E3 /* SceneDelegate.swift */,
 				3F4044C6234363F300A8D7E3 /* LoginViewController.swift */,
 				3F4044C8234363F300A8D7E3 /* Main.storyboard */,
+				3FE655E6234DD3A0004A0997 /* vaccineTableViewController.swift */,
+				3FE655E8234DD3B2004A0997 /* basicDataTableViewController.swift */,
+				3FE655EA234DD3BE004A0997 /* testsTableViewController.swift */,
 				3FAC68B6234782420002E33A /* PastRecordsViewController.swift */,
 				3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */,
 				3FAC68BA234782660002E33A /* TestsViewController.swift */,
@@ -271,10 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE655EB234DD3BE004A0997 /* testsTableViewController.swift in Sources */,
+				3FE655E9234DD3B2004A0997 /* basicDataTableViewController.swift in Sources */,
 				3FAC68B92347825A0002E33A /* VaccinationsViewController.swift in Sources */,
 				3F4044C7234363F300A8D7E3 /* LoginViewController.swift in Sources */,
 				3F4044CD234363F300A8D7E3 /* Antenatal_Care.xcdatamodeld in Sources */,
 				3FAC68B7234782420002E33A /* PastRecordsViewController.swift in Sources */,
+				3FE655E7234DD3A0004A0997 /* vaccineTableViewController.swift in Sources */,
 				3FAC68B52347821F0002E33A /* TapNFCViewController.swift in Sources */,
 				3F4044C3234363F300A8D7E3 /* AppDelegate.swift in Sources */,
 				3FAC68BB234782660002E33A /* TestsViewController.swift in Sources */,
