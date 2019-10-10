@@ -160,6 +160,15 @@ class EditBasicDataViewController: UIViewController {
                             }
                            } else {
                                print("Document does not exist")
+                            self.fName.placeholder="Enter Data"
+                            self.mName.placeholder="Enter Data"
+                            self.lName.placeholder="Enter Data"
+                            self.add1.placeholder="Enter Data"
+                            self.add2.placeholder="Enter Data"
+                            self.city.placeholder="Enter Data"
+                            self.state.placeholder="Enter Data"
+                            self.zip.placeholder="Enter Data"
+                            self.phno.placeholder="Enter Data"
                            }
                        }
                           }
@@ -169,7 +178,7 @@ class EditBasicDataViewController: UIViewController {
     @IBAction func writePressed(_ sender: UIButton) {
         let db=Firestore.firestore()
         guard let uid=Auth.auth().currentUser?.uid else{return}
-        db.collection("Verified users").whereField("uid", isEqualTo: uid)
+        db.collection("verified_users").whereField("uid", isEqualTo: uid)
            .getDocuments() { (querySnapshot, err) in
                if let err = err {
                    print("Error getting documents: \(err)")
@@ -177,7 +186,7 @@ class EditBasicDataViewController: UIViewController {
                 guard let querySnapshot = querySnapshot else {
                     return
                 }
-                db.collection("Patient").document(uid).setData([
+                db.collection("Patient/\(uid)/basic_data").document(uid).setData([
                     "first_name": self.fName.text,
                     "middle_name": self.mName.text,
                     "last_name": self.lName.text,

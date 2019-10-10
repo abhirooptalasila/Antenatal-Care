@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		14AE9B0FE359C843386A2575 /* Pods_Antenatal_Care.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA25D569AFDC8B7774BA36DC /* Pods_Antenatal_Care.framework */; };
+		3F3B4481234F897B00812610 /* TestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B4480234F897B00812610 /* TestsTableViewController.swift */; };
+		3F3B4483234F89A500812610 /* TestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B4482234F89A500812610 /* TestsTableViewCell.swift */; };
+		3F3B4485234F8BA700812610 /* AddTestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B4484234F8BA700812610 /* AddTestsTableViewController.swift */; };
 		3F4044C3234363F300A8D7E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044C2234363F300A8D7E3 /* AppDelegate.swift */; };
 		3F4044C5234363F300A8D7E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044C4234363F300A8D7E3 /* SceneDelegate.swift */; };
 		3F4044C7234363F300A8D7E3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4044C6234363F300A8D7E3 /* LoginViewController.swift */; };
@@ -19,7 +22,6 @@
 		3FAC68B52347821F0002E33A /* TapNFCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68B42347821F0002E33A /* TapNFCViewController.swift */; };
 		3FAC68B7234782420002E33A /* PastRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68B6234782420002E33A /* PastRecordsViewController.swift */; };
 		3FAC68B92347825A0002E33A /* VaccinationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */; };
-		3FAC68BB234782660002E33A /* TestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68BA234782660002E33A /* TestsViewController.swift */; };
 		3FAC68BD234782750002E33A /* BasicDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC68BC234782750002E33A /* BasicDataViewController.swift */; };
 		3FCEADD6234C9B3700C1177F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCEADD5234C9B3700C1177F /* GoogleService-Info.plist */; };
 		3FCEADD8234C9D5300C1177F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEADD7234C9D5300C1177F /* Constants.swift */; };
@@ -28,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F3B4480234F897B00812610 /* TestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsTableViewController.swift; sourceTree = "<group>"; };
+		3F3B4482234F89A500812610 /* TestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsTableViewCell.swift; sourceTree = "<group>"; };
+		3F3B4484234F8BA700812610 /* AddTestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTestsTableViewController.swift; sourceTree = "<group>"; };
 		3F4044BF234363F300A8D7E3 /* Antenatal Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Antenatal Care.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4044C2234363F300A8D7E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F4044C4234363F300A8D7E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +46,6 @@
 		3FAC68B42347821F0002E33A /* TapNFCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapNFCViewController.swift; sourceTree = "<group>"; };
 		3FAC68B6234782420002E33A /* PastRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsViewController.swift; sourceTree = "<group>"; };
 		3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationsViewController.swift; sourceTree = "<group>"; };
-		3FAC68BA234782660002E33A /* TestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsViewController.swift; sourceTree = "<group>"; };
 		3FAC68BC234782750002E33A /* BasicDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataViewController.swift; sourceTree = "<group>"; };
 		3FCEADD5234C9B3700C1177F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FCEADD7234C9D5300C1177F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -115,11 +119,13 @@
 				3F4044C6234363F300A8D7E3 /* LoginViewController.swift */,
 				3FAC68B6234782420002E33A /* PastRecordsViewController.swift */,
 				3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */,
-				3FAC68BA234782660002E33A /* TestsViewController.swift */,
 				3FAC68BC234782750002E33A /* BasicDataViewController.swift */,
 				3FAC68B42347821F0002E33A /* TapNFCViewController.swift */,
 				3FCEADDA234CA02F00C1177F /* unverifiedViewController.swift */,
 				3F6150E5234DF18800267ADA /* EditBasicDataViewController.swift */,
+				3F3B4480234F897B00812610 /* TestsTableViewController.swift */,
+				3F3B4482234F89A500812610 /* TestsTableViewCell.swift */,
+				3F3B4484234F8BA700812610 /* AddTestsTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -295,13 +301,15 @@
 				3FAC68B92347825A0002E33A /* VaccinationsViewController.swift in Sources */,
 				3FCEADD8234C9D5300C1177F /* Constants.swift in Sources */,
 				3F4044C7234363F300A8D7E3 /* LoginViewController.swift in Sources */,
+				3F3B4483234F89A500812610 /* TestsTableViewCell.swift in Sources */,
 				3F4044CD234363F300A8D7E3 /* Antenatal_Care.xcdatamodeld in Sources */,
 				3FAC68B7234782420002E33A /* PastRecordsViewController.swift in Sources */,
 				3FCEADDB234CA02F00C1177F /* unverifiedViewController.swift in Sources */,
 				3F6150E6234DF18800267ADA /* EditBasicDataViewController.swift in Sources */,
 				3FAC68B52347821F0002E33A /* TapNFCViewController.swift in Sources */,
+				3F3B4481234F897B00812610 /* TestsTableViewController.swift in Sources */,
 				3F4044C3234363F300A8D7E3 /* AppDelegate.swift in Sources */,
-				3FAC68BB234782660002E33A /* TestsViewController.swift in Sources */,
+				3F3B4485234F8BA700812610 /* AddTestsTableViewController.swift in Sources */,
 				3FAC68BD234782750002E33A /* BasicDataViewController.swift in Sources */,
 				3F4044C5234363F300A8D7E3 /* SceneDelegate.swift in Sources */,
 				3FF98B34234624B7005D8741 /* Patient.swift in Sources */,

@@ -42,7 +42,7 @@ class BasicDataViewController: UIViewController {
                 guard let querySnapshot = querySnapshot else {
                     return
                 }
-                let docRef = db.collection("Patient").document(uid)
+                let docRef = db.collection("Patient/\(uid)/basic_data").document(uid)
 
                 docRef.getDocument { (document, error) in
                     if let document = document, document.exists {
@@ -221,7 +221,7 @@ class BasicDataViewController: UIViewController {
                 guard let querySnapshot = querySnapshot else {
                     return
                 }
-                let docRef = db.collection("Patient").document(uid)
+                let docRef = db.collection("Patient/\(uid)/basic_data").document(uid)
 
                 docRef.getDocument { (document, error) in
                     if let document = document, document.exists {
