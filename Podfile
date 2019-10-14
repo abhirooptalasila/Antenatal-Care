@@ -12,6 +12,7 @@ target 'Antenatal Care' do
 	pod 'Firebase/Storage'
 	pod 'FirebaseUI/Auth'
 	pod 'FirebaseUI/Email'
+pod 'SDWebImage', '~> 5.0'
   # Pods for Antenatal Care
 
 end

@@ -42,7 +42,7 @@ class BasicDataViewController: UIViewController {
                 guard let querySnapshot = querySnapshot else {
                     return
                 }
-                let docRef = db.collection("Patient/\(uid)/basic_data").document(uid)
+                let docRef = db.collection("patient/\(uid)/basic_data").document(uid)
 
                 docRef.getDocument { (document, error) in
                     if let document = document, document.exists {
@@ -112,6 +112,7 @@ class BasicDataViewController: UIViewController {
                         }
                      if fname != ""{
                         self.fName.text=fname
+                         self.fName.textColor=UIColor.black
                      }
                      else{
                          self.fName.text="No Data"
@@ -120,6 +121,7 @@ class BasicDataViewController: UIViewController {
                         
                      if mname != ""{
                          self.mName.text=mname
+                        self.mName.textColor=UIColor.black
                      }
                      else{
                          self.mName.text="No Data"
@@ -127,6 +129,7 @@ class BasicDataViewController: UIViewController {
                      }
                      if lname != ""{
                          self.lName.text=lname
+                        self.lName.textColor=UIColor.black
                      }
                      else{
                         self.lName.text="No Data"
@@ -134,6 +137,7 @@ class BasicDataViewController: UIViewController {
                      }
                      if add1 != ""{
                          self.add1.text=add1
+                        self.add1.textColor=UIColor.black
                      }
                      else{
                          self.add1.text="No Data"
@@ -141,6 +145,7 @@ class BasicDataViewController: UIViewController {
                      }
                      if add2 != ""{
                         self.add2.text=add2
+                        self.add2.textColor=UIColor.black
                      }
                      else{
                          self.add2.text="No Data"
@@ -148,6 +153,7 @@ class BasicDataViewController: UIViewController {
                         }
                      if city != ""{
                         self.city.text=city
+                        self.city.textColor=UIColor.black
                      }
                      else{
                          self.city.text="No Data"
@@ -155,6 +161,7 @@ class BasicDataViewController: UIViewController {
                      }
                      if state != ""{
                         self.state.text=state
+                        self.state.textColor=UIColor.black
                      }
                      else{
                           self.state.text="No Data"
@@ -162,6 +169,7 @@ class BasicDataViewController: UIViewController {
                      }
                      if zip != ""{
                          self.zip.text=zip
+                        self.zip.textColor=UIColor.black
                      }
                      else{
                          self.zip.text="No Data"
@@ -169,6 +177,7 @@ class BasicDataViewController: UIViewController {
                      }
                      if phno != ""{
                          self.phno.text=phno
+                        self.phno.textColor=UIColor.black
                      }
                      else{
                          self.phno.text="No Data"
@@ -221,7 +230,7 @@ class BasicDataViewController: UIViewController {
                 guard let querySnapshot = querySnapshot else {
                     return
                 }
-                let docRef = db.collection("Patient/\(uid)/basic_data").document(uid)
+                let docRef = db.collection("patient/\(uid)/basic_data").document(uid)
 
                 docRef.getDocument { (document, error) in
                     if let document = document, document.exists {

@@ -56,7 +56,6 @@ extension LoginViewController: FUIAuthDelegate
                 guard let querySnapshot = querySnapshot else {return}
                 if querySnapshot.count > 0
                 {
-                    self.loginButton.isEnabled=false
                     Constants.id.docid=querySnapshot.documents[0].documentID
                     self.performSegue(withIdentifier: "successfulLogin", sender: self)
                 }

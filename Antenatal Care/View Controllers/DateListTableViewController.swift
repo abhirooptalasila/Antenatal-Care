@@ -1,25 +1,25 @@
 //
-//  TestsTableViewController.swift
+//  DateListTableViewController.swift
 //  Antenatal Care
 //
-//  Created by student on 10/10/19.
+//  Created by student on 11/10/19.
 //  Copyright © 2019 student. All rights reserved.
 //
 
 import UIKit
 import Firebase
-class TestsTableViewController: UITableViewController {
 
+class DateListTableViewController: UITableViewController {
 
     @IBOutlet weak var editButton: UIButton!
-    private var buttonImage:UIImage!
-    private var flag:Int=0
-    var tests:[String]=[]
+    var testName:String?
+    var dates:[String]=[]
 
-        private func loadFirebaseTests(){
+        private func loadFirebaseDates(){
             let db=Firestore.firestore()
             guard let uid=Auth.auth().currentUser?.uid else{return}
-                       db.collection("patient/\(uid)/tests").whereField("uid", isEqualTo: uid)
+            guard let testName=testName else{return}
+            db.collection("patient/\(uid)/tests/\(testName)/\(uid)").whereField("uid", isEqualTo: uid)
                           .getDocuments() { (querySnapshot, err) in
                               if let err = err {
                                   print("Error getting documents: \(err)")
@@ -27,9 +27,9 @@ class TestsTableViewController: UITableViewController {
                                guard let querySnapshot = querySnapshot else {
                                    return
                                }
-                                self.tests=[]
+                                self.dates=[]
                                 for doc in querySnapshot.documents{
-                                    self.tests.append(doc.documentID)
+                                    self.dates.append(doc.documentID)
                                 }
                                 
                         }
@@ -40,54 +40,42 @@ class TestsTableViewController: UITableViewController {
     @objc func refresh(sender:AnyObject)
     {
         
-        loadFirebaseTests()
+        loadFirebaseDates()
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadFirebaseTests()
+        loadFirebaseDates()
         tableView.refreshControl=UIRefreshControl()
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
-
     }
-
     // MARK: - Table view data source
 
+
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
-    //override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        
-    //}
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tests.count
+        return dates.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath) as! TestsTableViewCell
-        let test = tests[indexPath.row]
-        cell.testNameLabel.text=test
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath) as! DateListTableViewCell
+        let date = dates[indexPath.row]
+        cell.dateLabel.text=date
         cell.showsReorderControl = true
         
         return cell
     }
     
     @IBAction func editButtonTapped(_ sender: UIButton) {
-        
-        if self.editButton.currentTitle=="Done"{
-            self.editButton.setTitle("Edit", for: UIControl.State.normal)
-            self.editButton.setImage(buttonImage, for: UIControl.State.normal)
-        }
-        if self.editButton.currentTitle=="Edit" && flag==0{
-        buttonImage=self.editButton.currentImage
         self.editButton.setImage(nil, for: UIControl.State.normal)
         self.editButton.setTitle("Done", for: UIControl.State.normal)
-            flag=1
-        }
-        
         let tableViewEditingMode = tableView.isEditing
+        
         tableView.setEditing(!tableViewEditingMode, animated: true)
         
     }
@@ -100,44 +88,44 @@ class TestsTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let name=tests[indexPath.row]
-            tests.remove(at: indexPath.row)
+            let date=dates[indexPath.row]
+            dates.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             let db=Firestore.firestore()
             guard let uid=Auth.auth().currentUser?.uid else{return}
-            
-            db.collection("patient/\(uid)/tests/\(name)/\(uid)").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-             guard let querySnapshot = querySnapshot else {
-                 return
-             }
-                for doc in querySnapshot.documents{
-        db.collection("patient/\(uid)/tests/\(name)/\(uid)").document(doc.documentID).delete()
-                    let testresRef = Storage.storage().reference().child("patient/\(uid)/tests/\(name)/\(doc.documentID)")
-                    testresRef.delete { error in
-                        if error != nil {
-                        // Uh-oh, an error occurred!
-                      } else {
-                        // File deleted successfully
-                      }
+            guard let testName=testName else{return}
+            db.collection("patient/\(uid)/tests/\(testName)/\(uid)").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                 guard let querySnapshot = querySnapshot else {
+                     return
+                 }
+                    for doc in querySnapshot.documents{
+                        if doc.documentID==date{
+                                db.collection("patient/\(uid)/tests/\(testName)/\(uid)").document(doc.documentID).delete()
+                        }
+                    }
                     }
                 }
-                }
-            }
-            
-            db.collection("patient/\(uid)/tests").document(name).delete() { err in
-                if let err = err {
-                    print("Error removing document: \(err)")
-                } else {
-                    print("Document successfully removed!")
-                }
+            let testresRef = Storage.storage().reference().child("patient/\(uid)/tests/\(testName)/\(date)")
+                   testresRef.delete { error in
+                     if let error = error {
+                       // Uh-oh, an error occurred!
+                     } else {
+                       // File deleted successfully
+                     }
+                   }
             }
         }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let date = dates[indexPath.row]
+        let destinationVC=TestResultViewController()
+        guard let testName=testName else{return}
+        destinationVC.testName=testName
+        destinationVC.date=date
+        performSegue(withIdentifier: "showResult", sender: self)
     }
-    
-
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -193,16 +181,16 @@ class TestsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-     @IBAction func unwindtoTestList(unwindSegue: UIStoryboardSegue){
+     @IBAction func unwindtoDateList(unwindSegue: UIStoryboardSegue){
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier=="showDate"{
+        if segue.identifier=="showResult"{
             let indexPath=tableView.indexPathForSelectedRow!
-            let test=tests[indexPath.row]
-            let destVC=segue.destination as? DateListTableViewController
-            destVC?.testName=test
+            guard let testName=testName else{return}
+            let date=dates[indexPath.row]
+            let destVC=segue.destination as? TestResultViewController
+            destVC?.testName=testName
+            destVC?.date=date
         }
     }
-
 }

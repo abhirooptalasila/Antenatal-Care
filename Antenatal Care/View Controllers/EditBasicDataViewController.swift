@@ -44,7 +44,7 @@ class EditBasicDataViewController: UIViewController {
                        guard let querySnapshot = querySnapshot else {
                            return
                        }
-                       let docRef = db.collection("Patient").document(uid)
+                       let docRef = db.collection("patient/\(uid)/basic_data").document(uid)
 
                        docRef.getDocument { (document, error) in
                            if let document = document, document.exists {
@@ -186,7 +186,7 @@ class EditBasicDataViewController: UIViewController {
                 guard let querySnapshot = querySnapshot else {
                     return
                 }
-                db.collection("Patient/\(uid)/basic_data").document(uid).setData([
+                db.collection("patient/\(uid)/basic_data").document(uid).setData([
                     "first_name": self.fName.text,
                     "middle_name": self.mName.text,
                     "last_name": self.lName.text,

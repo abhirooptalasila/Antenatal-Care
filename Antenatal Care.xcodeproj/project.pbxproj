@@ -26,6 +26,9 @@
 		3FCEADD6234C9B3700C1177F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCEADD5234C9B3700C1177F /* GoogleService-Info.plist */; };
 		3FCEADD8234C9D5300C1177F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEADD7234C9D5300C1177F /* Constants.swift */; };
 		3FCEADDB234CA02F00C1177F /* unverifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEADDA234CA02F00C1177F /* unverifiedViewController.swift */; };
+		3FDFA1F723509AD500521F5E /* DateListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA1F623509AD500521F5E /* DateListTableViewController.swift */; };
+		3FDFA1F923509B3200521F5E /* DateListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA1F823509B3200521F5E /* DateListTableViewCell.swift */; };
+		3FDFA1FB2350A12900521F5E /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA1FA2350A12900521F5E /* TestResultViewController.swift */; };
 		3FF98B34234624B7005D8741 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98B33234624B7005D8741 /* Patient.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		3FCEADD5234C9B3700C1177F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FCEADD7234C9D5300C1177F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3FCEADDA234CA02F00C1177F /* unverifiedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unverifiedViewController.swift; sourceTree = "<group>"; };
+		3FDFA1F623509AD500521F5E /* DateListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListTableViewController.swift; sourceTree = "<group>"; };
+		3FDFA1F823509B3200521F5E /* DateListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListTableViewCell.swift; sourceTree = "<group>"; };
+		3FDFA1FA2350A12900521F5E /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
 		3FF98B33234624B7005D8741 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		49A5A7116789A9E8909A6579 /* Pods-Antenatal Care.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antenatal Care.release.xcconfig"; path = "Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care.release.xcconfig"; sourceTree = "<group>"; };
 		A6A4685A4F72A32153783AB8 /* Pods-Antenatal Care.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antenatal Care.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				3F3B4480234F897B00812610 /* TestsTableViewController.swift */,
 				3F3B4482234F89A500812610 /* TestsTableViewCell.swift */,
 				3F3B4484234F8BA700812610 /* AddTestsTableViewController.swift */,
+				3FDFA1F623509AD500521F5E /* DateListTableViewController.swift */,
+				3FDFA1F823509B3200521F5E /* DateListTableViewCell.swift */,
+				3FDFA1FA2350A12900521F5E /* TestResultViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -215,34 +224,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8DDE1ACD7A1E89C57A6ACB2A /* [CP] Copy Pods Resources */ = {
@@ -251,22 +241,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseEmailAuthUI.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Antenatal Care/Pods-Antenatal Care-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF1A6FD0B952E7D28D96F2F0 /* [CP] Check Pods Manifest.lock */ = {
@@ -304,13 +287,16 @@
 				3F3B4483234F89A500812610 /* TestsTableViewCell.swift in Sources */,
 				3F4044CD234363F300A8D7E3 /* Antenatal_Care.xcdatamodeld in Sources */,
 				3FAC68B7234782420002E33A /* PastRecordsViewController.swift in Sources */,
+				3FDFA1F923509B3200521F5E /* DateListTableViewCell.swift in Sources */,
 				3FCEADDB234CA02F00C1177F /* unverifiedViewController.swift in Sources */,
+				3FDFA1F723509AD500521F5E /* DateListTableViewController.swift in Sources */,
 				3F6150E6234DF18800267ADA /* EditBasicDataViewController.swift in Sources */,
 				3FAC68B52347821F0002E33A /* TapNFCViewController.swift in Sources */,
 				3F3B4481234F897B00812610 /* TestsTableViewController.swift in Sources */,
 				3F4044C3234363F300A8D7E3 /* AppDelegate.swift in Sources */,
 				3F3B4485234F8BA700812610 /* AddTestsTableViewController.swift in Sources */,
 				3FAC68BD234782750002E33A /* BasicDataViewController.swift in Sources */,
+				3FDFA1FB2350A12900521F5E /* TestResultViewController.swift in Sources */,
 				3F4044C5234363F300A8D7E3 /* SceneDelegate.swift in Sources */,
 				3FF98B34234624B7005D8741 /* Patient.swift in Sources */,
 			);
