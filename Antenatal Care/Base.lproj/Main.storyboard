@@ -592,14 +592,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="testCell" id="AuD-BI-VoW" customClass="TestsTableViewCell" customModule="Antenatal_Care" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AuD-BI-VoW" id="0oQ-bp-IOf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqT-B6-NBD">
-                                            <rect key="frame" x="16" y="12.000000000000002" width="199" height="20.666666666666671"/>
+                                            <rect key="frame" x="16" y="12" width="199" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="199" id="0Hg-lm-eyf"/>
                                             </constraints>
