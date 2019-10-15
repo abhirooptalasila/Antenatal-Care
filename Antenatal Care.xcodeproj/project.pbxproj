@@ -108,6 +108,14 @@
 				3F4044C2234363F300A8D7E3 /* AppDelegate.swift */,
 				3F4044C4234363F300A8D7E3 /* SceneDelegate.swift */,
 				3F4044C8234363F300A8D7E3 /* Main.storyboard */,
+				3FE655E6234DD3A0004A0997 /* vaccineTableViewController.swift */,
+				3FE655E8234DD3B2004A0997 /* basicDataTableViewController.swift */,
+				3FE655EA234DD3BE004A0997 /* testsTableViewController.swift */,
+				3FAC68B6234782420002E33A /* PastRecordsViewController.swift */,
+				3FAC68B82347825A0002E33A /* VaccinationsViewController.swift */,
+				3FAC68BA234782660002E33A /* TestsViewController.swift */,
+				3FAC68BC234782750002E33A /* BasicDataViewController.swift */,
+				3FAC68B42347821F0002E33A /* TapNFCViewController.swift */,
 				3FF98B33234624B7005D8741 /* Patient.swift */,
 				3F4044CE234363F500A8D7E3 /* Assets.xcassets */,
 				3F4044D0234363F500A8D7E3 /* LaunchScreen.storyboard */,
@@ -281,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE655EB234DD3BE004A0997 /* testsTableViewController.swift in Sources */,
+				3FE655E9234DD3B2004A0997 /* basicDataTableViewController.swift in Sources */,
 				3FAC68B92347825A0002E33A /* VaccinationsViewController.swift in Sources */,
 				3FCEADD8234C9D5300C1177F /* Constants.swift in Sources */,
 				3F4044C7234363F300A8D7E3 /* LoginViewController.swift in Sources */,
