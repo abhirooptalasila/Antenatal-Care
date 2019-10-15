@@ -135,6 +135,9 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.10.0)
+  - SDWebImage (5.2.3):
+    - SDWebImage/Core (= 5.2.3)
+  - SDWebImage/Core (5.2.3)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -145,9 +148,10 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseUI/Auth
   - FirebaseUI/Email
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -171,6 +175,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SDWebImage
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -196,7 +201,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
 
-PODFILE CHECKSUM: ca087951769af42e8b8448b195be86303dd9e72b
+PODFILE CHECKSUM: 184d54e9f21ed2eb1d5e609f84fca853a6eb298c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.3

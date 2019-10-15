@@ -38,6 +38,7 @@ class TapNFCViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     @IBAction func scanPressed(_ sender: Any) {
         nfcsession = NFCNDEFReaderSession.init(delegate: self, queue: nil, invalidateAfterFirstRead: ((nfcsession?.begin()) != nil))
+        performSegue(withIdentifier: "scanSuccessful", sender: self)
     }
     
     func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
@@ -54,6 +55,8 @@ class TapNFCViewController: UIViewController, NFCNDEFReaderSessionDelegate {
             }
         }
     }
-    
+    @IBAction func unwindToTapNFC(unwindsegue:UIStoryboardSegue){
+        
+    }
 
 }

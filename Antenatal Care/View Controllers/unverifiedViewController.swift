@@ -1,14 +1,14 @@
 //
-//  TestsViewController.swift
+//  unverifiedViewController.swift
 //  Antenatal Care
 //
-//  Created by student on 04/10/19.
+//  Created by student on 08/10/19.
 //  Copyright © 2019 student. All rights reserved.
 //
 
 import UIKit
 
-class TestsViewController: UIViewController {
+class unverifiedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,12 @@ class TestsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func backPressed(_ sender: UIButton) {
+        let initialVC=self.storyboard?.instantiateViewController(identifier: Constants.BeginStoryboard.beginViewController) as? LoginViewController
+        self.view.window?.rootViewController=initialVC
+        self.view.window?.makeKeyAndVisible()
+    }
+    
     /*
     // MARK: - Navigation
 
